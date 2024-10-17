@@ -1,0 +1,20 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "southamerica-east1-docker.pkg.dev/implementacion-438915/tienda/orders:latest",
+        "-f",
+        "dockerfile",
+        "--platform=linux/amd64",
+        ".",
+      ]
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "push",
+        "southamerica-east1-docker.pkg.dev/implementacion-438915/tienda/orders:latest",
+      ]
+
+logsBucket: "gs://errores"  # Agrega el nombre del bucket aquí
