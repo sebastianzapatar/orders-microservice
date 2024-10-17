@@ -17,4 +17,3 @@ steps:
         "southamerica-east1-docker.pkg.dev/implementacion-438915/tienda/orders:latest",
       ]
 
-logsBucket: "gs://errores"  # Agrega el nombre del bucket aquí
